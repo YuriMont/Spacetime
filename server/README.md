@@ -50,3 +50,6 @@ configuração pessoal
 * Instalar prisma client
 > npm i @prisma/client
 
+
+* Cors 
+> npm i @fastify/cors
