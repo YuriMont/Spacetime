@@ -38,6 +38,14 @@ module.exports = {
   plugins: [require('prettier-plugin-tailwindcss')],
 }
 
+* Instalar fonts
+
+> npx expo install @expo-google-fonts/<font> expo-font
+
+* Leitor de svg
+
+> npx expo install react-native-svg
+
 * executar projeto
 
 > npm run start

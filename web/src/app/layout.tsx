@@ -7,7 +7,7 @@ import {
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['200', '300', '700'],
+  weight: ['400', '700'],
   variable: '--font-roboto',
 })
 const baiJamjuree = BaiJamjuree({
