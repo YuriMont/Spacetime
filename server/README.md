@@ -1,55 +1,74 @@
 Backend
 
-> npm init -y 
+> npm init -y
 
-> npm i typescript -D  
+> npm i typescript -D
 
 > npm i @types/node -D
 
-> npx tsc --init    
+> npx tsc --init
 
-> npm i tsx -D 
+> npm i tsx -D
 
-* arquivo tsconfig.json
+- arquivo tsconfig.json
 
 > target: es2020
 
-* arquivo package.json na tag script adicionar:
+- arquivo package.json na tag script adicionar:
 
 > "dev": "tsx watch src/server.ts"
 
-* instalar fastify
+- instalar fastify
 
 > npm i fastify
 
+- Instalar o eslint
 
-* Instalar o eslint
-
-> npm install eslint -D    
+> npm install eslint -D
 
 configuração da rocketseat
+
 > npm i @rocketseat/eslint-config -D
-em package.json na tag script adicionar "lint": "eslint src --ext .ts --fix"
+> em package.json na tag script adicionar "lint": "eslint src --ext .ts --fix"
 
 configuração pessoal
 
->npx eslint --init
+> npx eslint --init
 
-
-* Instalação do Prisma
+- Instalação do Prisma
 
 > npm i prisma -D
 
-* Iniciando prisma 
+- Iniciando prisma
 
 > npx prisma init --datasource-provider SQLite
 
-* Atualizar migration do prisma
-> npx prisma migrate dev   
+- Atualizar migration do prisma
 
-* Instalar prisma client
-> npm i @prisma/client
+  > npx prisma migrate dev
 
+- Instalar prisma client
 
-* Cors 
-> npm i @fastify/cors
+  > npm i @prisma/client
+
+- Cors
+
+  > npm i @fastify/cors
+
+- .env
+
+  > npm i dotenv -D
+
+- axios
+
+> npm i axios
+
+*arquivos
+
+> @fastify/multipart
+
+* pasta publica
+> npm i @fastify/static  
+
+- JWT
+  > npm i @fastify/jwt

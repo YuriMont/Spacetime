@@ -46,6 +46,22 @@ module.exports = {
 
 > npx expo install react-native-svg
 
+* sections
+> npx expo install expo-auth-session expo-crypto
+
+* axios
+> npm i axios  
+
+*Store
+> npx expo install expo-secure-store
+
+*Routes
+> npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar react-native-gesture-handler
+
+>npm install react-native-keyboard-aware-scroll-view
+
+>npx expo install expo-image-picker
+
 * executar projeto
 
 > npm run start
