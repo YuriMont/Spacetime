@@ -34,9 +34,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-900 font-sans text-gray-100`}
       >
-        <main className="grid h-screen grid-cols-2">
+        <main className="flex flex-col sm:grid sm:h-screen sm:grid-cols-2">
           {/* Left */}
-          <div className="relative flex flex-col items-start justify-between overflow-hidden border-r-2 border-white/10 bg-[url(../assets/bg-stars.svg)] bg-cover px-28 py-16">
+          <div className="relative flex flex-col items-start justify-between gap-4 border-r-2 border-white/10 bg-[url(../assets/bg-stars.svg)] bg-cover px-14 py-8 sm:overflow-hidden sm:px-28 sm:py-16">
             {/* Blur */}
             <div className="absolute right-0 top-1/2 h-[288px] w-[586px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full" />
             {/* Stripes */}
@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Copyright />
           </div>
           {/* Right */}
-          <div className="flex flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16">
+          <div className="flex- flex bg-[url(../assets/bg-stars.svg)] bg-cover sm:max-h-screen sm:overflow-y-scroll">
             {children}
           </div>
         </main>

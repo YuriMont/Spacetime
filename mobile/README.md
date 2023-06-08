@@ -62,6 +62,8 @@ module.exports = {
 
 >npx expo install expo-image-picker
 
+>npm i dayjs
+
 * executar projeto
 
 > npm run start

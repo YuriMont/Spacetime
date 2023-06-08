@@ -6,3 +6,24 @@ body{
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #9e9ea0 #eaeaea;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #eaeaea;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #9e9ea0;
+    border-radius: 10px;
+    border: 3px solid #eaeaea;
+  }

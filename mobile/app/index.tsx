@@ -29,7 +29,7 @@ export default function App() {
   );
 
   async function handleGithubOAuthCode(code: string) {
-    const response = await api.post("/register", {
+    const response = await api.post("/register-mobile", {
       code,
     });
     const { token } = response.data;

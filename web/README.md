@@ -29,6 +29,7 @@ npm i axios
 npm i @tailwindcss/forms -D
 npm i js-cookie
 npm i --save-dev @types/js-cookie
+npm i dayjs
 ```
 
 Esses comandos instalarão as seguintes bibliotecas:
@@ -40,6 +41,7 @@ Esses comandos instalarão as seguintes bibliotecas:
 - `@tailwindcss/forms`: um plugin do Tailwind CSS para estilizar formulários.
 - `js-cookie`: uma biblioteca para lidar com cookies em JavaScript.
 - `@types/js-cookie`: tipos TypeScript para a biblioteca js-cookie.
+- `dayjs`: uma biblioteca capaz de manipular datas
 
 
 ## Conclusão
