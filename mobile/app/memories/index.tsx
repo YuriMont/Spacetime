@@ -1,11 +1,11 @@
 import { Link, useRouter } from "expo-router";
-import NLWLogo from "../src/assets/nlw-spacetime-logo.svg";
+import NLWLogo from "../../src/assets/nlw-spacetime-logo.svg";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Icon from "@expo/vector-icons/Feather";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as SecureStore from "expo-secure-store";
 import { useEffect, useState } from "react";
-import { api } from "../src/lib/api";
+import { api } from "../../src/lib/api";
 import dayjs from "dayjs";
 import ptBr from "dayjs/locale/pt-br";
 
@@ -69,7 +69,7 @@ export default function Memories() {
       </View>
       {memories.map((memory) => {
         return (
-          <View className="mt-6 space-y-10" key={memory.id}>
+          <View className="mt-6 space-y-10 px-4" key={memory.id}>
             <View className="space-y-4">
               <View className="flex-row items-center gap-2">
                 <View className="h-px w-5 bg-gray-50" />
@@ -86,7 +86,7 @@ export default function Memories() {
                 <Text className="font-body text-base leading-relaxed text-gray-100">
                   {memory.excerpt}
                 </Text>
-                <Link href="/memorires/id" asChild>
+                <Link href={`/memories/${memory.id}`} asChild>
                   <TouchableOpacity className="flex-row items-center gap-2">
                     <Text className="font-body text-sm text-gray-200">
                       Ler mais

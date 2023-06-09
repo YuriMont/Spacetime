@@ -22,6 +22,7 @@ export default function NewMomery() {
   const { bottom, top } = useSafeAreaInsets();
 
   const [preview, setPreview] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const [content, setContent] = useState("");
   const [isPublic, setIsPublic] = useState(false);
@@ -42,6 +43,7 @@ export default function NewMomery() {
   }
 
   async function handleCreateMemory() {
+    setLoading(true)
     const token = await SecurityStore.getItemAsync("token");
 
     let coverUrl = "";
@@ -52,7 +54,7 @@ export default function NewMomery() {
       uploadFormData.append("file", {
         uri: preview,
         name: "image.jpg",
-        type: "image/jpeg",
+        type: "image/jpg",
       } as any);
 
       const uploadResponse = await api.post("/upload", uploadFormData, {
@@ -77,7 +79,7 @@ export default function NewMomery() {
         },
       }
     );
-
+    setLoading(false)
     router.push("/memories");
   }
 
@@ -138,12 +140,13 @@ export default function NewMomery() {
           multiline
         />
         <TouchableOpacity
+          disabled={loading}
           activeOpacity={0.7}
-          className="rounded-full bg-green-500 px-5 py-2"
+          className="rounded-full bg-green-500 disabled:bg-green-700 px-5 py-2"
           onPress={handleCreateMemory}
         >
           <Text className="text-center font-alt text-sm uppercase text-black">
-            Salvar
+            {loading ? "Salvando..." : "Salvar"}
           </Text>
         </TouchableOpacity>
       </View>
