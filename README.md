@@ -37,8 +37,8 @@ A plataforma organiza suas memórias de forma cronológica, permitindo que você
 * NativeWind
 * ESlint
 
-<img src="./images/mobile_page-1.png" style="margin: 16px 64px"/>
-<img src="./images/mobile_page-2.png" style="margin: 16px 64px"/>
+<img src="./images/mobile_page_1.png" style="margin: 16px 64px"/>
+<img src="./images/mobile_page_2.png" style="margin: 16px 64px"/>
 
 ## 📌 Funcionalidades
 * Login usando GitHub
