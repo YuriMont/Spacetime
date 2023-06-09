@@ -1,74 +1,138 @@
-Backend
+# Documentação do Sistema Backend
 
-> npm init -y
+## Descrição
+Este documento descreve os passos necessários para configurar e executar o sistema backend. O sistema utiliza o TypeScript como linguagem de programação, o Fastify como framework web, o Prisma como ORM e banco de dados, e inclui algumas dependências adicionais, como o ESLint e o JWT.
 
-> npm i typescript -D
+## Requisitos
+Antes de começar, certifique-se de ter os seguintes requisitos instalados em sua máquina:
+- Node.js (versão 18.16.0 ou posterior)
+- npm (gerenciador de pacotes do Node.js)
 
-> npm i @types/node -D
+## Configuração
 
-> npx tsc --init
+### 1. Inicialização do projeto
+Abra o terminal e navegue até a pasta do projeto. Execute o seguinte comando para inicializar o projeto Node.js:
+```
+npm init -y
+```
 
-> npm i tsx -D
+### 2. Instalação do TypeScript
+Para utilizar o TypeScript no projeto, execute o seguinte comando:
+```
+npm i typescript -D
+```
 
-- arquivo tsconfig.json
+### 3. Instalação das definições de tipo do Node.js
+Para obter as definições de tipo do Node.js, execute o seguinte comando:
+```
+npm i @types/node -D
+```
 
-> target: es2020
+### 4. Configuração do TypeScript
+Execute o seguinte comando para gerar o arquivo de configuração do TypeScript:
+```
+npx tsc --init
+```
+Edite o arquivo `tsconfig.json` e certifique-se de que o valor da propriedade `target` esteja definido como `"es2020"`.
 
-- arquivo package.json na tag script adicionar:
+### 5. Instalação do pacote ts-node-dev
+Execute o seguinte comando para instalar o pacote `ts-node-dev`:
+```
+npm i ts-node-dev -D
+```
 
-> "dev": "tsx watch src/server.ts"
+### 6. Instalação do Fastify
+Para utilizar o Fastify como framework web, execute o seguinte comando:
+```
+npm i fastify
+```
 
-- instalar fastify
+### 7. Instalação do ESLint
+Execute o seguinte comando para instalar o ESLint:
+```
+npm install eslint -D
+```
 
-> npm i fastify
+### 8. Configuração da Rocketseat
+Se desejar utilizar a configuração do ESLint fornecida pela Rocketseat, execute os seguintes comandos:
+```
+npm i @rocketseat/eslint-config -D
+```
+Edite o arquivo `package.json` e adicione o seguinte script na seção `"scripts"`:
+```
+"lint": "eslint src --ext .ts --fix"
+```
 
-- Instalar o eslint
+### 9. Configuração pessoal do ESLint
+Se preferir utilizar sua própria configuração do ESLint, execute o seguinte comando:
+```
+npx eslint --init
+```
 
-> npm install eslint -D
+### 10. Instalação do Prisma
+Para utilizar o Prisma como ORM e banco de dados, execute o seguinte comando:
+```
+npm i prisma -D
+```
 
-configuração da rocketseat
+### 11. Inicialização do Prisma
+Execute o seguinte comando para inicializar o Prisma com o provedor de banco de dados SQLite:
+```
+npx prisma init --datasource-provider SQLite
+```
 
-> npm i @rocketseat/eslint-config -D
-> em package.json na tag script adicionar "lint": "eslint src --ext .ts --fix"
+### 12. Atualização da migração do Prisma
+Para atualizar a migração do Prisma, execute o seguinte comando:
+```
+npx prisma migrate dev
+```
 
-configuração pessoal
+### 13. Instalação do Prisma Client
+Para instalar o Prisma Client, execute o seguinte comando:
+```
+npm i @prisma/client
+```
 
-> npx eslint --init
+### 14. Instalação do Fastify CORS
+Para utilizar o CORS com o Fast
 
-- Instalação do Prisma
+ify, execute o seguinte comando:
+```
+npm i @fastify/cors
+```
 
-> npm i prisma -D
+### 15. Instalação do pacote dotenv
+Para utilizar variáveis de ambiente com o pacote dotenv, execute o seguinte comando:
+```
+npm i dotenv -D
+```
 
-- Iniciando prisma
+### 16. Instalação do Axios
+Para utilizar o Axios para fazer requisições HTTP, execute o seguinte comando:
+```
+npm i axios
+```
 
-> npx prisma init --datasource-provider SQLite
+### 17. Instalação do @fastify/multipart
+Para lidar com requisições multipart no Fastify, execute o seguinte comando:
+```
+npm i @fastify/multipart
+```
 
-- Atualizar migration do prisma
+### 18. Instalação do @fastify/static
+Para servir arquivos estáticos no Fastify, execute o seguinte comando:
+```
+npm i @fastify/static
+```
 
-  > npx prisma migrate dev
+### 19. Instalação do JWT
+Para utilizar o JWT (JSON Web Token) no Fastify, execute o seguinte comando:
+```
+npm i @fastify/jwt
+```
 
-- Instalar prisma client
+## Utilização
+Após a conclusão da configuração do sistema backend. Certifique-se de executar os comandos necessários para iniciar o servidor, como o script de desenvolvimento `npm run dev` definido no arquivo `package.json` ou outro comando equivalente especificado em sua configuração.
 
-  > npm i @prisma/client
-
-- Cors
-
-  > npm i @fastify/cors
-
-- .env
-
-  > npm i dotenv -D
-
-- axios
-
-> npm i axios
-
-*arquivos
-
-> @fastify/multipart
-
-* pasta publica
-> npm i @fastify/static  
-
-- JWT
-  > npm i @fastify/jwt
+## Considerações finais
+Esta documentação forneceu as instruções básicas para configurar e executar o sistema backend. Lembre-se de consultar a documentação oficial de cada pacote ou ferramenta utilizada para obter informações adicionais sobre como utilizá-los de forma eficaz.
